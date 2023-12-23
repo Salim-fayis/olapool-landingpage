@@ -12,7 +12,7 @@ function App() {
   return (
     <>
    
-    <Router>
+    <Router basename="/olapool-landingpage/">
     <Navbar />
     <Carousel />
       <Routes>
