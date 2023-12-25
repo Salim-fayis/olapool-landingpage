@@ -1,4 +1,4 @@
-import cameraImage from '../../assets/LandingPageImages/CameraandLens.jpg';
+import cameraImage from '../../assets/RentalImages/camer prod.png';
 
 const cameraData = [
   {

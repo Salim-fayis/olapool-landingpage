@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'; 
 
-function SeeAllButton({ link, children }) {
+const SeeAllButton=({ link, children })=> {
   return (
     <div className="flex items-center justify-end ">
     <Link to={link} className="text-black font-bold flex items-center">

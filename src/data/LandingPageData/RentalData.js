@@ -1,4 +1,8 @@
-import oldmodel from '../../assets/RentalImages/old-model.jpg'
+import oldmodel from '../../assets/RentalImages/car prod.png'
+import lens from '../../assets/RentalImages/camer prod.png'
+import worklocation from '../../assets/RentalImages/work prod.png'
+import artprod from '../../assets/RentalImages/Art prod.png'
+import jeep from '../../assets/RentalImages/jeep prod.png'
 import smallimg1 from '../../assets/RentalImages/simage1.jpg'
 const rentalsData = [
     {
@@ -11,7 +15,7 @@ const rentalsData = [
     },
     {
       id: 2,
-      imageUrl: oldmodel,
+      imageUrl: lens,
       smallImageUrl: smallimg1,
       title:"charsherly",
       paraText: 'I will provide variety of vintage cars for rent',
@@ -19,7 +23,7 @@ const rentalsData = [
     },
     {
       id: 3,
-      imageUrl: oldmodel,
+      imageUrl: worklocation,
       smallImageUrl: smallimg1,
       title:"charsherly",
       paraText: 'I will provide variety of vintage cars for rent',
@@ -27,7 +31,7 @@ const rentalsData = [
     },
     {
       id: 4,
-      imageUrl: oldmodel,
+      imageUrl: artprod,
       smallImageUrl: smallimg1,
       title:"charsherly",
       paraText: 'I will provide variety of vintage cars for rent',
@@ -35,7 +39,7 @@ const rentalsData = [
     },
     {
       id: 5,
-      imageUrl: oldmodel,
+      imageUrl: jeep,
       smallImageUrl: smallimg1,
       title:"charsherly",
       paraText: 'I will provide variety of vintage cars for rent',

@@ -4,8 +4,11 @@
 
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
+
 
 .slick-dots {
   position: absolute;
@@ -37,4 +40,24 @@
   opacity: 1;
   background-color: #fff; /* Set the background color of the active dot to white */
   border: 1px solid #fff; /* Set the border color of the active dot to white */
+}
+
+
+.car{
+  position: relative;
+  overflow-x: hidden ;
+}
+
+.nav{
+  position: absolute;
+  z-index: 10;
+}
+
+.sort{
+  position: absolute;
+  z-index: 10;
+}
+
+.card-sort{
+  position: relative;
 }

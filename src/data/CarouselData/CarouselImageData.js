@@ -1,4 +1,5 @@
-import carouselImage1 from '../../assets/CarouselImages/carouselImage1.jpg';
+import carouselImage1 from '../../assets/CarouselImages/caroselImage1.png';
+import carouselImage2 from '../../assets/CarouselImages/carouselImage2.png';
 
 const imageData = [
   {
@@ -9,7 +10,7 @@ const imageData = [
   },
   {
     id: 2,
-    imageUrl: carouselImage1,
+    imageUrl: carouselImage2,
     heading: 'Rent a camera now!',
     description: 'Elevate your creative potential and bring your unique vision to life with our camera rentals.',
   },

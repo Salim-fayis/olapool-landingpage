@@ -1,4 +1,4 @@
-import shootingVehcile from '../../assets/LandingPageImages/ShootingVechicles.jpg'
+import shootingVehcile from '../../assets/RentalImages/car prod.png'
 
 
 const vehicleRentalData = [

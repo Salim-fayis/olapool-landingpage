@@ -1,11 +1,11 @@
-import ornaments from '../../assets/LandingPageImages/ornaments.jpg'
-import shootingVehcile from '../../assets/LandingPageImages/ShootingVechicles.jpg'
+import ornaments from '../../assets/LandingPageImages/Ellipse 140.png'
+import shootingVehcile from '../../assets/LandingPageImages/car.png'
 import location from '../../assets/LandingPageImages/Locations.jpg'
-import soundunit from '../../assets/LandingPageImages/soundUnits.jpg'
-import camera from '../../assets/LandingPageImages/CameraandLens.jpg'
-import workstation from '../../assets/LandingPageImages/workStations.jpg'
-import artproperties from '../../assets/LandingPageImages/artProperty.jpg'
-import costume from '../../assets/LandingPageImages/costume.jpg'
+import soundunit from '../../assets/LandingPageImages/sound unit.png'
+import camera from '../../assets/LandingPageImages/camera and lens.png'
+import workstation from '../../assets/LandingPageImages/work&location.png'
+import artproperties from '../../assets/LandingPageImages/Art pop.png'
+import costume from '../../assets/LandingPageImages/coustumes.png'
 
 
 const imageData = [

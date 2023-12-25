@@ -11,18 +11,29 @@ import 'slick-carousel/slick/slick-theme.css';
 import imageData from '../../data/CarouselData/CarouselImageData';
 import locations from '../../data/LocationData/LocationData';
 
-function Carousel() {
+const Carousel=() =>{
 
-  const [selectedDate, setSelectedDate] = useState(null);
+  const [selectedPickDate, setSelectedPickDate] = useState(null);
+  const [selectedDropDate, setSelectedDropDate] = useState(null);
+
+
   const [selectedTime, setSelectedTime] = useState(new Date());
-  const handleDateChange = (date) => {
-    setSelectedDate(date);
+
+
+  const handlePickUpDateChange = (date) => {
+    setSelectedPickDate(date);
   };
+  const handleDropUpDateChange = (date) => {
+    setSelectedDropDate(date);
+  };
+
+
+
+
 
   const handleTimeChange = (time) => {
     setSelectedTime(time);
   };
-
 
   const carouselSettings = {
     dots: true,
@@ -33,25 +44,25 @@ function Carousel() {
   };
 
   return (
-    <div className="relative w-full">
+    <div className="relative car ">
       <Slider {...carouselSettings}>
         {imageData.map((item) => (
-          <div key={item.id} className="relative h-[500px] w-full">
+          <div key={item.id} className="relative h-[500px] w-full ">
             <img src={item.imageUrl} alt={item.heading} className="w-full h-full object-cover" />
-            <div className="absolute top-1/2 left-1/4 transform -translate-x-1/2 -translate-y-1/2 text-start text-white">
-              <h1 className="text-4xl font-extrabold w-[300px]">{item.heading}</h1>
+            <div className="absolute top-1/2  transform px-10 -translate-y-1/2 text-start text-white">
+              <h1 className="text-4xl font-extrabold w-[300px] ">{item.heading}</h1>
               <p className="text-white-600 w-[350px]">{item.description}</p>
             </div>
           </div>
         ))}
       </Slider>
-      <div className="absolute bottom-0 left-[10%] w-[90%] h-[150px] bg-white p-3">
+      <div className="hidden  lg:block absolute bottom-0 left-[2%] w-[98%] h-[120px]  bg-white p-3 ">
 
-        <div className="bg-gray-200 pl-4 rounded-lg">
+        <div className=" bg-gray-200 pl-4 rounded-lg">
 
-          <div className="flex flex-row space-x-2">
+          <div className="  flex flex-row space-x-8">
 
-            <div className="flex items-center">
+            <div className="flex items-center ">
               <input
                 type="text"
                 placeholder="Pick-up Location"
@@ -65,9 +76,11 @@ function Carousel() {
 
             <div className="pt-4">
               <label className=" pl-3 pt-2 text-black-900 text-md font-light absolute z-10   ">Pick-up date</label>
+
               <DatePicker
-                selected={selectedDate}
-                onChange={handleDateChange}
+
+                selected={selectedPickDate}
+                onChange={handlePickUpDateChange}
                 dateFormat="eee d MMM"
                 className="p-4 pt-9 border w-[120px] h-[80px] border-gray-300 rounded-md focus:outline-none text-green-500  relative "
               />
@@ -78,24 +91,28 @@ function Carousel() {
 
 
             <div className="relative pt-4">
-              <label className=" pl-3 pt-2 text-black-900 text-md font-light absolute z-10   ">Time</label>
-
-              <input
-                type="text"
-                value={selectedTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
-                readOnly
-                placeholder="Select time"
-                className="border p-4 pt-9 text-green-500 w-[100px] h-[80px] border-gray-300 rounded-md focus:outline-none"
+              <label className=" pl-7 pt-2 text-black-900 text-md font-light absolute z-10   ">
+                Time
+              </label>
+             
+              <TimePicker
+              
+                value={selectedTime}
+                onChange={handleTimeChange}
+                disableClock
+                border={null}
+                clockIcon={null}
+                clearIcon={null}
+                className="p-4 pt-9  bg-white w-[120px] h-[80px] rounded-md focus:outline-none text-green-500 "
               />
-
             </div>
 
 
             <div className="pt-4">
               <label className=" pl-3 pt-2 text-black-900 text-md font-light absolute z-10   ">Drop-off date</label>
               <DatePicker
-                selected={selectedDate}
-                onChange={handleDateChange}
+                selected={selectedDropDate}
+                onChange={handleDropUpDateChange}
                 dateFormat="eee d MMM"
                 className="p-4 pt-9 border w-[120px] h-[80px] border-gray-300 rounded-md focus:outline-none text-green-500  relative "
               />
@@ -103,18 +120,19 @@ function Carousel() {
 
 
             </div>
-
-            <div className="relative p-4">
-              <label className=" pl-3 pt-2 text-black-900 text-md font-light absolute z-10   ">Time</label>
-
-              <input
-                type="text"
-                value={selectedTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
-                readOnly
-                placeholder="Select time"
-                className="border p-4 pt-9 text-green-500 w-[100px] h-[80px] border-gray-300 rounded-md focus:outline-none"
+            <div className="relative pt-4">
+              <label className=" pl-7 pt-2 text-black-900 text-md font-light absolute z-10   ">
+                Time
+              </label>
+             
+              <TimePicker
+                value={selectedTime}
+                onChange={handleTimeChange}
+                disableClock
+                clockIcon={null}
+                clearIcon={null}
+                className="p-4 pt-9  bg-white w-[120px] h-[80px] rounded-md focus:outline-none text-green-500 "
               />
-
             </div>
 
             <div className="flex items-center">
@@ -127,9 +145,9 @@ function Carousel() {
                 <FontAwesomeIcon icon={faSearch} className="text-gray-500" />
               </div>
             </div>
-           
-            <div className='p-10'>
-              <button className=" text-green-500  font-extrabold w-full">SEARCH</button>
+
+            <div className='p-10 '>
+              <button className=" text-green-500  font-extrabold w-full ">SEARCH</button>
             </div>
           </div>
         </div>
